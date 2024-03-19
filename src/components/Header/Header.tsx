@@ -6,12 +6,9 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCalculator,
-  faFileLines,
-  faTextSlash,
-} from "@fortawesome/free-solid-svg-icons";
+import CalculateIcon from "@mui/icons-material/Calculate";
+import FormatClearIcon from "@mui/icons-material/FormatClear";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 interface Props {
   endTime?: Date;
@@ -25,6 +22,9 @@ const buttonStyle = {
   backgroundColor: "transparent",
   color: "white",
   fontSize: "small",
+  IconStyle: {
+    pr: 2,
+  },
 };
 
 export const Header: React.FC<Props> = ({}) => {
@@ -45,27 +45,21 @@ export const Header: React.FC<Props> = ({}) => {
           </Box>
           <Box flexGrow={0}>
             <Tooltip title="3 of 5 pages">
-              <Button
-                sx={{ color: "white", fontSize: "small" }}
-                startIcon={<FontAwesomeIcon icon={faFileLines} />}
-              >
-                3 of 5
+              <Button sx={{ color: "white", fontSize: "small" }}>
+                <AutoStoriesIcon fontSize="small" /> : 3 of 5
               </Button>
             </Tooltip>
           </Box>
         </Toolbar>
       </div>
       <Box display={"flex"} height={35} pl={7} gap={5} bgcolor={"#86BCEA"}>
-        <Button
-          sx={buttonStyle}
-          startIcon={<FontAwesomeIcon icon={faCalculator} fontSize={"small"} />}
-        >
+        <Button sx={buttonStyle}>
+          <CalculateIcon fontSize="medium" sx={buttonStyle.IconStyle} />
           Calculator
         </Button>
-        <Button
-          sx={buttonStyle}
-          startIcon={<FontAwesomeIcon icon={faTextSlash} fontSize={"small"} />}
-        >
+
+        <Button sx={buttonStyle}>
+          <FormatClearIcon fontSize="medium" sx={buttonStyle.IconStyle} />
           Clear
         </Button>
       </Box>
