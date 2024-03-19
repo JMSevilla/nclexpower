@@ -27,7 +27,7 @@ const buttonStyle = {
   },
 };
 
-export const Header: React.FC<Props> = ({}) => {
+const Header: React.FC<Props> = ({}) => {
   return (
     <AppBar>
       <div style={{ padding: 10, backgroundColor: "#007AB7" }}>
@@ -36,29 +36,29 @@ export const Header: React.FC<Props> = ({}) => {
           sx={{ display: "flex", justifyContent: "space-between" }}
         >
           <Box>
-            <Typography fontWeight="bold">Time Remaining 04:00:00</Typography>
-            <Typography fontSize={14}>Duration: 00:15 |</Typography>
+            <Typography fontWeight="bold" style={{fontFamily: 'Arial, sans-serif'}}>Time Remaining 04:00:00</Typography>
+            <Typography fontSize={14} style={{fontFamily: 'Arial, sans-serif'}}>Duration: 00:15 |</Typography>
           </Box>
           <Box>
-            <Typography textAlign="center">QID: 291</Typography>
-            <Typography>NCLEX Sample Tutor</Typography>
+            <Typography textAlign="center" style={{fontFamily: 'Arial, sans-serif'}}>QID: 291</Typography>
+            <Typography style={{fontFamily: 'Arial, sans-serif'}}>NCLEX Sample Tutor</Typography>
           </Box>
           <Box flexGrow={0}>
             <Tooltip title="3 of 5 pages">
               <Button sx={{ color: "white", fontSize: "small" }}>
-                <AutoStoriesIcon fontSize="small" /> : 3 of 5
+                <AutoStoriesIcon fontSize="small" style={{fontFamily: 'Arial, sans-serif'}} /> : 3 of 5
               </Button>
             </Tooltip>
           </Box>
         </Toolbar>
       </div>
       <Box display={"flex"} height={35} pl={7} gap={5} bgcolor={"#86BCEA"}>
-        <Button sx={buttonStyle}>
+        <Button sx={buttonStyle} style={{fontFamily: 'Arial, sans-serif'}}>
           <CalculateIcon fontSize="medium" sx={buttonStyle.IconStyle} />
           Calculator
         </Button>
 
-        <Button sx={buttonStyle}>
+        <Button sx={buttonStyle} style={{fontFamily: 'Arial, sans-serif'}}>
           <FormatClearIcon fontSize="medium" sx={buttonStyle.IconStyle} />
           Clear
         </Button>
@@ -66,3 +66,5 @@ export const Header: React.FC<Props> = ({}) => {
     </AppBar>
   );
 };
+
+export default Header
