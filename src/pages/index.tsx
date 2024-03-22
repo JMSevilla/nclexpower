@@ -1,21 +1,37 @@
-import { Header, Footer, QContainer } from "@/components";
-import React from "react";
+import { Header, Footer, QContainer, CSQContainer, Card } from "@/components";
+import React, { useEffect, useState } from "react";
 import { GetServerSideProps } from "next";
 import { InitA, InitQ } from "@/core/ssr/api";
+
+interface userType {
+  name: string
+  age: number
+}
 
 interface Props {
   data?: any;
   error?: any;
+  user: {
+
+  }
+
 }
 
 export default function Home({ data, error }: Props) {
-  console.log(data);
+  const [questionContainer, setQuestionContainer] = useState()
+
+  useEffect(() => {
+    InitQ().then(res => setQuestionContainer(res))
+
+  }, [])
+
   return (
-    <>
+    <div className='h-[71dvh] '>
       <Header />
       <QContainer />
       <Footer />
-    </>
+
+    </div>
   );
 }
 
