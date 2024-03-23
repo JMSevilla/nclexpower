@@ -1,14 +1,14 @@
 import { Card, CardActions, CardContent, Paper } from '@mui/material'
-import React, { ReactNode } from 'react'
+import React, { PropsWithChildren, ReactNode } from 'react'
 
 interface Props {
-    hasAction: boolean;
+    hasAction?: boolean;
     children: ReactNode;
-    sx: any;
+    sx?: any;
     element: ReactNode;
 }
 
-const BasicCard = ({ hasAction = false, children, sx = {}, element }: Props) => {
+const BasicCard: React.FC<React.PropsWithChildren<Props>> = ({ hasAction, children, element, sx }) => {
     return (
         <Card sx={sx}>
             <CardContent>

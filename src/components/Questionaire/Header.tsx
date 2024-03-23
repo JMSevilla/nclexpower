@@ -28,7 +28,7 @@ const buttonStyle = {
 
 };
 
-const Header: React.FC<Props> = ({ }) => {
+const Header: React.FC<Props> = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static'>

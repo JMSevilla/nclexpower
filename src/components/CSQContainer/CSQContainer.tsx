@@ -4,11 +4,10 @@ import React from 'react'
 
 interface Props {
     question?: any[]
-    tabId?: string;
 }
 
 
-export const CSQContainer: React.FC = ({ question }: Props) => {
+export const CSQContainer: React.FC<Props> = ({ question }) => {
 
 
     return (

@@ -18,12 +18,7 @@ interface Props {
 }
 
 export default function Home({ data, error }: Props) {
-  const [questionContainer, setQuestionContainer] = useState()
 
-  useEffect(() => {
-    InitQ().then(res => setQuestionContainer(res))
-
-  }, [])
 
   return (
     <div className='h-[71dvh] '>
