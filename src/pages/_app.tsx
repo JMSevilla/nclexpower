@@ -3,6 +3,8 @@ import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { NextPage } from "next";
 import { ReactElement, ReactNode } from "react";
 import { theme } from "@/theme/theme";
+import '../styles/globals.css'
+
 
 type NextPageWithLayout<P = any, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
