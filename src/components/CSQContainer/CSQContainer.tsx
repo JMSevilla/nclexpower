@@ -2,13 +2,20 @@
 import { Paper } from '@mui/material'
 import React from 'react'
 
+interface QuestionData {
+    contentTitle: string
+    id: string
+    question: string
+    tabs: []
+
+}
+
 interface Props {
-    question?: any[]
+    question?: QuestionData[]
 }
 
 
 export const CSQContainer: React.FC<Props> = ({ question }) => {
-
 
     return (
         <div className='h-full w-1/2 p-5'>

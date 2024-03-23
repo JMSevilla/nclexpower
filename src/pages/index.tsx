@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { GetServerSideProps } from "next";
 import { InitA, InitQ } from "@/core/ssr/api";
 
+
 interface userType {
   name: string
   age: number
@@ -18,7 +19,6 @@ interface Props {
 }
 
 export default function Home({ data, error }: Props) {
-
 
   return (
     <div className='h-[71dvh] '>
