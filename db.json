@@ -13,6 +13,14 @@
                     "content": "..."
                 }
             ]
+            
+        },
+        {
+            "qId": 2,
+            "QType": "CS",
+            "caseStudy": [
+                
+            ]
         }
     ],
     "answer": [
@@ -26,6 +34,12 @@
             "rows": [
                 {
                     "AF": "appetite",
+                    "BO": false,
+                    "APT": false,
+                    "RS": false
+                },
+                {
+                    "AF": "pain level",
                     "BO": false,
                     "APT": false,
                     "RS": false
