@@ -1,22 +1,32 @@
 import React from "react";
 import { Grid, Container } from "@mui/material";
-import { CSQContainer } from '@/components';
+import { ParseRQ } from "../RegularQuestions/RQ/ParseRQ";
+import { SsrData } from "@/core/types";
 
 interface Props {
-  node1?: React.ReactElement | React.ReactNode;
-  node2?: React.ReactElement | React.ReactNode;
+  questionaire?: SsrData["questionaire"];
+  answer?: SsrData["answer"];
 }
 
-export const QContainer: React.FC<Props> = ({ node1, node2 }) => {
+export const QContainer: React.FC<Props> = ({ questionaire, answer }) => {
+  // useApiCallback, useAPI
+  /**
+   * const [disableNextBTN, setDisableNextBTN] = useState<boolean>(false)
+   * array.some() -> returns boolean
+   * const checkSelectedAnswers = array.length > 0 && array.map(... const bowelObstruction = array.some(item => item.bo ))
+   * length >= 0 || length >= 3
+   *
+   * export const questionSchema = ({schema}) => {
+   *
+   * }
+   */
   return (
-    <Container >
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} >
+    <Container>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={6}>
-          {node1}
+          <ParseRQ questionatire={questionaire ?? []} />
         </Grid>
-        <Grid item xs={6}>
-          {node2}
-        </Grid>
+        <Grid item xs={6}></Grid>
       </Grid>
     </Container>
   );
