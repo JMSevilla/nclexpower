@@ -2,15 +2,14 @@ import { Footer, Header } from '@/components'
 import { Box, Container } from '@mui/material'
 import React, { PropsWithChildren } from 'react'
 
-export const simulatorLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const SimulatorLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
     return (
-        <Box style={{ height: '100dvh', width: '100dvw', backgroundColor: 'wheat' }}>
+        <div className='min-h-[100dvh] flex flex-col justify-between'>
             <Header />
             {children}
             <Footer />
-
-        </Box>
+        </div>
     )
 }
 
-export default simulatorLayout
+export default SimulatorLayout

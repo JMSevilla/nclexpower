@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { GetServerSideProps } from "next";
 import { InitA, InitQ } from "@/core/ssr/api";
 import { SsrData } from "@/core/types";
+import SimulatorLayout from '@/pages/Layout/simulatorLayout';
+import { MyContext } from '@/core/Context/MyContext';
 
 interface userType {
   name: string;
@@ -16,12 +18,15 @@ interface Props {
 }
 
 export default function Home({ data, error }: Props) {
-  console.log(data.prefetchQ);
+
   return (
-    <div className="h-[71dvh] ">
-      <Header />
-      <QContainer questionaire={data.prefetchQ as SsrData["questionaire"]} />
-      <Footer />
+    <div className="h-fit min-h-[100dvh] ">
+
+      {/* <MyContext.Provider value={{}}> */}
+      <SimulatorLayout>
+        <QContainer answer={data.prefetchA as SsrData["answer"]} questionaire={data.prefetchQ as SsrData["questionaire"]} />
+      </SimulatorLayout>
+      {/* </MyContext.Provider> */}
     </div>
   );
 }

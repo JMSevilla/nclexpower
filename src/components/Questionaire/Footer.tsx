@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AppBar, Toolbar, Button, Typography, Box } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PauseIcon from '@mui/icons-material/Pause';
+import { MyContext } from '@/core/Context/MyContext';
+
+
 
 const QuestionnaireFooter: React.FC = () => {
   return (
-    <div className='h-fit w-full bg-[#007ab7]'>
+    <div className='h-fit w-full bg-[#007ab7] text-white sticky bottom-0'>
       <Toolbar disableGutters>
         <Box sx={{ height: '100%', width: '100%' }}>
           <Button disabled color="inherit" sx={{ width: '32%', padding: '1rem', borderRight: '2px solid #F8FAF8', fontFamily: 'Arial, sans-serif', gap: 1, display: 'none' }}>
