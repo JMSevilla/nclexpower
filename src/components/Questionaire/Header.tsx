@@ -30,8 +30,8 @@ const buttonStyle = {
 
 const Header: React.FC<Props> = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position='static'>
+    <Box >
+      <AppBar position='block'>
         <div style={{ padding: 10, backgroundColor: "#007AB7" }}>
           <Toolbar
             disableGutters

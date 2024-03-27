@@ -11,7 +11,7 @@ export type QuestionaireProps = {
   }>;
 };
 
-type AnswerProps = {
+export type AnswerProps = {
   answerId: number;
   qId: number;
   answerType: string;
@@ -20,6 +20,8 @@ type AnswerProps = {
   columns: Array<string>;
   rows: any;
   note: string;
+  score: number;
+
 };
 
 export type SsrData = {

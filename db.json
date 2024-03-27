@@ -2,48 +2,34 @@
     "questionaire": [
         {
             "qId": 1,
-            "QType": "SATA",
-            "question": "",
+            "QType": "MCQ",
+            "question": "The nurse in the emergency department (ED) is caring for a 78-year-old female client.",
             "questionUI": "Tabs",
             "tabs": [
                 {
                     "tabsId": 1,
                     "tabsTitle": "Nurses' Notes",
-                    "contentTitle": "Emergency Department",
-                    "content": "..."
+                    "contentTitle": "",
+                    "content": "Client was brought to the ED by the client’s adult child due to increased shortness of breath this morning. The adult child reports that the client has been running a fever for the past few days and has started to cough up greenish mucus and to complain of soreness throughout the body. Client was hospitalized for issues with atrial fibrillation 6 days ago. History of hypertension. Vital signs: T 101.1° F (38.4° C), P 92, RR 22, BP 152/86, pulse oximetry reading 94% on oxygen at 2 L/min via nasal cannula. On assessment, the client’s breathing appears slightly labored, and coarse crackles (rales) are noted in the bilateral lung bases. Skin slightly cool to touch and pale pink in tone; pulses 3+ and irregular. Capillary refill is 3 seconds. Client is alert and oriented to person, place, and time. The adult child states, “Sometimes it seems like my parent is confused.” Peripheral venous access device (VAD) placed in right forearm."
                 }
-            ]
-            
-        },
-        {
-            "qId": 2,
-            "QType": "CS",
-            "caseStudy": [
-                
             ]
         }
     ],
     "answer": [
         {
-            "answerId": 1,
-            "qId": 1,
-            "answerType": "SATA",
-            "answerInstruction": "",
-            "answerUI": "Table",
-            "columns": ["Assessment Findings", "Bowel Obstruction", "Appendicitis", "Ruptured Spleen"],
-            "rows": [
-                {
-                    "AF": "appetite",
-                    "BO": false,
-                    "APT": false,
-                    "RS": false
-                },
-                {
-                    "AF": "pain level",
-                    "BO": false,
-                    "APT": false,
-                    "RS": false
-                }
+            "answerId": 2,
+            "qId": 1000,
+            "answerType": "SingleSelect",
+            "answerInstruction": "The nurse has reviewed the Progress Notes from 1000 and 1600, the Diagnostic Results from 1100 and 1300, and the Laboratory Results from 0830, all from Day 14, and is implementing the client’s plan of care.",
+            "answerUI": "MultipleChoices",
+            "choices": [
+                "temperature and pulse oximetry reading",
+                "lung sounds",
+                "laboratory results",
+                "shoulder pain",
+                "productive cough",
+                "pulse, respirations, and blood pressure",
+                "abdominal assessment findings"
             ],
             "note": ""
         }
